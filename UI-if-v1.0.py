@@ -17,8 +17,8 @@ with open('zh_evaluate.txt', 'r', encoding='UTF-8') as evaluate:
     for txt in evaluate.readlines():
         evaluate = txt.split(';')
 
-with open('user.txt', 'r+', encoding='UTF-8') as USER:
-    for txt in USER.readlines():
+with open('user.txt', 'r+', encoding='UTF-8') as user_f:
+    for txt in user_f.readlines():
         USER = txt.split(';')
 
 
