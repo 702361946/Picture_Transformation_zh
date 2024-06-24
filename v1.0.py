@@ -12,10 +12,6 @@ with open('zh_evaluate.txt', 'r', encoding='UTF-8') as evaluate:
     for txt in evaluate.readlines():
         evaluate = txt.split(';')
 
-with open('user.txt', 'r+', encoding='UTF-8') as user:
-    for txt in user.readlines():
-        user = txt.split(';')
-
 
 def def_question(txt0):
     t0 = 0
@@ -29,18 +25,11 @@ def def_question(txt0):
 
 
 def def_evaluate(txt0):
-    txt = open('user.txt', 'w+', encoding='UTF-8')
-    txt.write(txt0)
-    txt.close()
-    print('您或许可以当:' + txt0)
     print('')
+    print('您或许可以当:' + txt0)
     print('感谢游玩《听说你想做游戏》')
     input('按下回车键退出')
     exit()
-
-
-def user():
-    print('您上次选择完后,您或许可以当:' + user[0])
 
 
 # 开始页
@@ -53,18 +42,14 @@ while t1 < 1:
 877599174@qq.com
 版权所有702361946@qq.com @2024''')
     input0 = input('''0 开始
-1 上一次记录
 9 退出''')
     if input0 == '0':
         print()
-    elif input0 == '1':
-        user()
     elif input0 == '9':
         exit()
     else:
         print('请输入有效的值')
         t1 = 0
-    print()
 
 # 游戏页
 if True:
@@ -221,4 +206,3 @@ if True:
                 def_evaluate(evaluate[7])
             elif temp == 'n':
                 def_evaluate(evaluate[8])
-

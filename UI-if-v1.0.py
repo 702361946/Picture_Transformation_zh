@@ -16,10 +16,6 @@ with open('zh_evaluate.txt', 'r', encoding='UTF-8') as evaluate:
     for txt in evaluate.readlines():
         evaluate = txt.split(';')
 
-with open('user.txt', 'r+', encoding='UTF-8') as user:
-    for txt in user.readlines():
-        user = txt.split(';')
-
 
 def win_destroy():
     win.destroy()
@@ -46,9 +42,6 @@ def def_question(txt0):
 
 
 def def_evaluate(txt0):
-    txt = open('user.txt', 'w+', encoding='UTF-8')
-    txt.write(txt0)
-    txt.close()
     win = Tk()
     win.title("game_if")
     win.geometry("320x180")
@@ -61,22 +54,6 @@ def def_evaluate(txt0):
 
     message0.pack()
     message1.pack()
-    button0.pack()
-
-    win.mainloop()
-
-
-def user():
-    win = Tk()
-    win.title("game_if")
-    win.geometry("320x180")
-    win.iconbitmap("1.ico")
-    win.resizable(False, False)
-
-    message0 = Message(win, text=('您上次选择完后,您或许可以当:' + user[0]))
-    button0 = Button(win, text='确定', command=win_destroy)
-
-    message0.pack()
     button0.pack()
 
     win.mainloop()
@@ -98,13 +75,11 @@ if True:
 
     message0 = Message(win, text='《听说你想做游戏》', width=320)
     button0 = Button(win, text='开始', command=win_destroy)
-    button1 = Button(win, text='记录', command=user)
-    button2 = Button(win, text='退出', command=esc)
+    button1 = Button(win, text='退出', command=esc)
 
     message0.pack()
     button0.pack()
     button1.pack()
-    button2.pack()
 
     win.mainloop()
 
