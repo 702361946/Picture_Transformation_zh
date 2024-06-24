@@ -17,9 +17,9 @@ with open('zh_evaluate.txt', 'r', encoding='UTF-8') as evaluate:
     for txt in evaluate.readlines():
         evaluate = txt.split(';')
 
-with open('user.txt', 'r+', encoding='UTF-8') as user:
-    for txt in user.readlines():
-        user = txt.split(';')
+with open('user.txt', 'r+', encoding='UTF-8') as USER:
+    for txt in USER.readlines():
+        USER = txt.split(';')
 
 
 def win_destroy():
@@ -31,6 +31,8 @@ def esc():
 
 
 def def_problem(txt0):
+
+
     win = Tk()
     win.title("game_if")
     win.geometry("320x180")
@@ -68,13 +70,15 @@ def def_evaluate(txt0):
 
 
 def user():
+    def win_destroy():
+        win.destroy()
     win = Tk()
     win.title("game_if")
     win.geometry("320x180")
     win.iconbitmap("1.ico")
     win.resizable(False, False)
 
-    message0 = Message(win, text=('您上次选择完后,您或许可以当:' + user[0]))
+    message0 = Message(win, text=('您上次选择完后,您或许可以当:' + USER[0]))
     button0 = Button(win, text='确定', command=win_destroy)
 
     message0.pack()
@@ -190,7 +194,6 @@ if True:
                                     if def_problem(problem[36]):
                                         def_evaluate(evaluate[35])
                                     else:
-
                                         if def_problem(problem[37]):
                                             def_evaluate(evaluate[36])
                                         else:
