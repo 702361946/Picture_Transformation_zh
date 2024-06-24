@@ -4,9 +4,9 @@
 # PyCharm Community Edition 2024.1.1
 temp = ''
 
-with open('zh_problem.txt', 'r', encoding='UTF-8') as problem:
-    for txt in problem.readlines():
-        problem = txt.split(';')
+with open('zh_question.txt', 'r', encoding='UTF-8') as question:
+    for txt in question.readlines():
+        question = txt.split(';')
 
 with open('zh_evaluate.txt', 'r', encoding='UTF-8') as evaluate:
     for txt in evaluate.readlines():
@@ -17,7 +17,7 @@ with open('user.txt', 'r+', encoding='UTF-8') as user:
         user = txt.split(';')
 
 
-def def_problem(txt0):
+def def_question(txt0):
     t0 = 0
     while t0 < 1:
         t0 = 1
@@ -68,27 +68,27 @@ while t1 < 1:
 
 # 游戏页
 if True:
-    def_problem(problem[0])
+    def_question(question[0])
     if temp == 'y':
-        def_problem(problem[1])
+        def_question(question[1])
         if temp == 'y':
-            def_problem(problem[2])
+            def_question(question[2])
             if temp == 'y':
                 def_evaluate(evaluate[0])
             elif temp == 'n':
                 def_evaluate(evaluate[1])
         elif temp == 'n':
-            def_problem(problem[3])
+            def_question(question[3])
             if temp == 'y':
                 def_evaluate(evaluate[2])
             elif temp == 'n':
-                def_problem(problem[4])
+                def_question(question[4])
                 if temp == 'y':
                     def_evaluate(evaluate[3])
                 elif temp == 'n':
-                    def_problem(problem[5])
+                    def_question(question[5])
                     if temp == 'y':
-                        def_evaluate(evaluate[6])
+                        def_question(question[6])
                         if temp == 'y':
                             def_evaluate(evaluate[5])
                         elif temp == 'n':
@@ -96,33 +96,33 @@ if True:
                     elif temp == 'n':
                         def_evaluate(evaluate[4])
     elif temp == 'n':
-        def_problem(problem[7])
+        def_question(question[7])
         if temp == 'y':
-            def_problem(problem[9])
+            def_question(question[9])
             if temp == 'y':
-                def_problem(problem[15])
+                def_question(question[15])
                 if temp == 'y':
-                    def_problem(problem[16])
+                    def_question(question[16])
                     if temp == 'y':
-                        def_problem(problem[17])
+                        def_question(question[17])
                         if temp == 'y':
-                            def_problem(problem[18])
+                            def_question(question[18])
                             if temp == 'y':
-                                def_problem(problem[19])
+                                def_question(question[19])
                                 if temp == 'y':
                                     def_evaluate(evaluate[15])
                                 elif temp == 'n':
-                                    def_problem(problem[20])
+                                    def_question(question[20])
                                     if temp == 'y':
                                         def_evaluate(evaluate[16])
                                     elif temp == 'n':
-                                        def_problem(problem[21])
+                                        def_question(question[21])
                                         if temp == 'y':
                                             def_evaluate(evaluate[18])
                                         elif temp == 'n':
                                             def_evaluate(evaluate[17])
                             elif temp == 'n':
-                                def_problem(problem[22])
+                                def_question(question[22])
                                 if temp == 'y':
                                     def_evaluate(evaluate[19])
                                 elif temp == 'n':
@@ -130,17 +130,17 @@ if True:
                         elif temp == 'n':
                             def_evaluate(evaluate[14])
                     elif temp == 'n':
-                        def_problem(problem[23])
+                        def_question(question[23])
                         if temp == 'y':
                             def_evaluate(evaluate[21])
                         elif temp == 'n':
-                            def_problem(problem[24])
+                            def_question(question[24])
                             if temp == 'y':
-                                def_problem(problem[25])
+                                def_question(question[25])
                                 if temp == 'y':
-                                    def_problem(problem[26])
+                                    def_question(question[26])
                                     if temp == 'y':
-                                        def_problem(problem[27])
+                                        def_question(question[27])
                                         if temp == 'y':
                                             def_evaluate(evaluate[26])
                                         elif temp == 'n':
@@ -152,11 +152,11 @@ if True:
                             elif temp == 'n':
                                 def_evaluate(evaluate[22])
                 elif temp == 'n':
-                    def_problem(problem[28])
+                    def_question(question[28])
                     if temp == 'y':
-                        def_problem(problem[29])
+                        def_question(question[29])
                         if temp == 'y':
-                            def_problem(problem[30])
+                            def_question(question[30])
                             if temp == 'y':
                                 def_evaluate(evaluate[29])
                             elif temp == 'n':
@@ -164,19 +164,19 @@ if True:
                         elif temp == 'n':
                             def_evaluate(evaluate[27])
                     elif temp == 'n':
-                        def_problem(problem[31])
+                        def_question(question[31])
                         if temp == 'y':
-                            def_problem(problem[34])
+                            def_question(question[34])
                             if temp == 'y':
                                 def_evaluate(evaluate[33])
                             elif temp == 'n':
-                                def_problem(problem[35])
+                                def_question(question[35])
                                 if temp == 'y':
-                                    def_problem(problem[36])
+                                    def_question(question[36])
                                     if temp == 'y':
                                         def_evaluate(evaluate[35])
                                     elif temp == 'n':
-                                        def_problem(problem[37])
+                                        def_question(question[37])
                                         if temp == 'y':
                                             def_evaluate(evaluate[36])
                                         elif temp == 'n':
@@ -184,29 +184,29 @@ if True:
                                 elif temp == 'n':
                                     def_evaluate(evaluate[34])
                         elif temp == 'n':
-                            def_problem(problem[32])
+                            def_question(question[32])
                             if temp == 'y':
                                 def_evaluate(evaluate[30])
                             elif temp == 'n':
-                                def_problem(problem[33])
+                                def_question(question[33])
                                 if temp == 'y':
                                     def_evaluate(evaluate[31])
                                 elif temp == 'n':
                                     def_evaluate(evaluate[32])
             elif temp == 'n':
-                def_problem(problem[10])
+                def_question(question[10])
                 if temp == 'y':
-                    def_problem(problem[11])
+                    def_question(question[11])
                     if temp == 'y':
                         def_evaluate(evaluate[10])
                     elif temp == 'n':
-                        def_problem(problem[12])
+                        def_question(question[12])
                         if temp == 'y':
                             def_evaluate(evaluate[11])
                         elif temp == 'n':
-                            def_problem(problem[13])
+                            def_question(question[13])
                             if temp == 'y':
-                                def_problem(problem[14])
+                                def_question(question[14])
                                 if temp == 'y':
                                     def_evaluate(evaluate[13])
                                 elif temp == 'n':
@@ -216,10 +216,9 @@ if True:
                 elif temp == 'n':
                     def_evaluate(evaluate[9])
         elif temp == 'n':
-            def_problem(problem[8])
+            def_question(question[8])
             if temp == 'y':
                 def_evaluate(evaluate[7])
             elif temp == 'n':
-                def_problem(problem[8])
+                def_evaluate(evaluate[8])
 
-input()
